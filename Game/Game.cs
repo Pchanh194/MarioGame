@@ -14,22 +14,19 @@ namespace Game
 {
     public partial class Game : Base
     {
-        #region Objects
         private GameTimer _GameTimer;
-        
+        KeyCode keyCode = KeyCode.getKeyCode();
+
         // Timer that refreshes the game image
         private Timer _timer;
         
         // Event that is triggered when the mouse button is released on the canvas
         public event EventHandler<MouseEventArgs> Canvas_MouseUp;
-        #endregion
 
-        #region Constructor
         public Game()
         {
             InitializeComponent();
             _GameTimer = new GameTimer();
-            KeyCode = new KeyCode();
 
             _timer = new Timer();
             _timer.Interval = 1000 / 30; // 60 FPS (the interval is not always respected in winforms)
@@ -41,7 +38,7 @@ namespace Game
 
                 Application.DoEvents();
                 this.Update(_GameTimer);  // run game logic
-                this.KeyCode.Clear();
+                keyCode.Clear();
 
                 using (DrawProcessor drawProcessor = new DrawProcessor(this.Canvas.Width, this.Canvas.Height))
                 {
@@ -50,14 +47,9 @@ namespace Game
                 }
             };
         }
-        #endregion
-
-        #region Properties
         /// Information of what keys are pressed
-        protected KeyCode KeyCode { get; set; } 
-        #endregion
+        // protected KeyCode KeyCode { get; set; } 
 
-        #region Events
         private void Game_Load(object sender, EventArgs e)
         {
             
@@ -71,14 +63,10 @@ namespace Game
         }
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            this.KeyCode.SetKey(e.KeyData);
+            keyCode.SetKey(e.KeyData);
         }
-        #endregion
 
-        #region Methods
         // Upload an image
-        // <param name="path">path of the image to load</param>
-        // <returns></returns>
         protected Image Load_Image(string path)
         {
             try
@@ -93,8 +81,6 @@ namespace Game
         }
        
         // Upload a text
-        // <param name="path">path of the file to upload</param>
-        // <returns></returns>
         protected string Load_Text(string path)
         {
             try
@@ -111,20 +97,32 @@ namespace Game
             }
         }
 
+        protected void Check_File(string path)
+        {
+            try
+            {
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
+                {
+                    return;
+                }
+            }
+            catch
+            {
+                Application.Exit();
+            }
+        }
+
         // Method where the game's logic is written
-        // <param name="GameTimer">Elapsed game time information</param>
         protected virtual void Update(GameTimer GameTimer)
         {
 
         }
 
         // Draw all sprites on screen
-        // <param name="drawProcessor">draw controller</param>
         public virtual void Draw(DrawProcessor drawProcessor)
         {
 
         }
 
-        #endregion
     }
 }

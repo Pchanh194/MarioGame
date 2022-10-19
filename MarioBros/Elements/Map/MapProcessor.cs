@@ -8,10 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.IO;
+
 
 namespace MarioBros.Elements.Map
 {
-    public class MapHandler
+    public class MapProcessor : Game.Game
     {
         // Objects
         public event EventHandler Restart;
@@ -19,7 +21,7 @@ namespace MarioBros.Elements.Map
         private Size _frameSize;
         private RectangleF _canvasRec;
 
-        public MapHandler(Elements.Resources resources, Size frameSize)
+        public MapProcessor(Elements.Resources resources, Size frameSize)
         {
             _frameSize = frameSize;
             State = GameState.Play;
@@ -59,7 +61,7 @@ namespace MarioBros.Elements.Map
 
             if (Objects_Layer.Mario.Position.Y > (this._frameSize.Height * 2))
                 this.Restart(null, EventArgs.Empty);
-            // if mario falls into a well or completes the map, it resets
+            // if mario falls into a well or completes the map, it resets // lose
         }
         private void UpdatePlaying(GameTimer gameTimer)
         {
@@ -128,6 +130,9 @@ namespace MarioBros.Elements.Map
 
             if (mario.PositionOnMap.X >= ((Tiles_Layer.Size.Width - 1) * Tiles_Layer.SizeOfTiles.Width))
             {
+                Program.NextLevel = true;
+                Demo newLevel = new Demo(Program.Level);
+                newLevel.Show();
                 this.Restart(null, EventArgs.Empty); // reset the map (or load the winning screen)
             }
         }
@@ -202,6 +207,27 @@ namespace MarioBros.Elements.Map
             Play, // game running
             Die, // show the animation of mario dying
             Win, // show the animation of mario winning
+        }
+
+        private void InitializeComponent()
+        {
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // MapProcessor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Name = "MapProcessor";
+            this.Load += new System.EventHandler(this.MapProcessor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        private void MapProcessor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

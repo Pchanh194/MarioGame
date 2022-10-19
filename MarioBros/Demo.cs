@@ -1,4 +1,5 @@
 ﻿using Game.Elements;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,45 +14,41 @@ namespace MarioBros
 {
     public partial class Demo : Game.Game
     {
-        #region Constructor
-        public Demo()
+        // LevelProcessor level = new LevelProcessor(0);
+        public Demo(int level)
         {
             InitializeComponent();
-            Initialize();
+            Initialize(level);
         }
-        #endregion
-
-        #region Properties
         // Graphic resources of the game
         public Elements.Resources Resources { get; set; }
         
-        public Elements.Map.MapHandler MapHandler { get; set; }
-        #endregion
-
-        #region Methods
+        public Elements.Map.MapProcessor MapProcessor { get; set; }
 
         // Load the graphic resources of the game
-        private void Initialize()
+        private void Initialize(int level)
         {
             string directory = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets");
-            this.Resources = new Elements.Resources()
+            this.Resources = new Elements.Resources();
+            this.Resources.TextureAtlas = Load_Image($"{directory}/TileSet.png");
+            if (Program.NextLevel)
             {
-                TextureAtlas = Load_Image($"{directory}/TileSet.png"),
-                MapData = Newtonsoft.Json.JsonConvert.DeserializeObject<Data.Map>(Load_Text($"{directory}/level2.json"))
-            };
+                Program.Level++;
+                Program.NextLevel = false;
+            }
+            Check_File($"{directory}/level{Program.Level}.json");
+            
+            this.Resources.MapData = Newtonsoft.Json.JsonConvert.DeserializeObject<Data.Map>(Load_Text($"{directory}/level{Program.Level}.json"));
             Canvas.BackColor = System.Drawing.ColorTranslator.FromHtml(this.Resources.MapData.backgroundcolor);
             InitializeMap();
         }
 
         // Load the map
-        private void InitializeMap()
+        public void InitializeMap()
         {
-            MapHandler = new Elements.Map.MapHandler(this.Resources, this.Canvas.Size);
-            MapHandler.Restart += (obj, e) => InitializeMap(); // reset the map
+            MapProcessor = new Elements.Map.MapProcessor(this.Resources, this.Canvas.Size);
+            MapProcessor.Restart += (obj, e) => InitializeMap(); // reset the map
         }
-        #endregion
-
-        #region Events
 
         private void Demo_KeyDown(object sender, KeyEventArgs e)
         {
@@ -81,23 +78,17 @@ namespace MarioBros
             if (e.KeyCode == Keys.Up)
                 Elements.KeyCode.Jump = false;
         }
-        #endregion
 
-        #region Update
         protected override void Update(GameTimer GameTimer)
         {
-            this.MapHandler.Update(GameTimer);
+            this.MapProcessor.Update(GameTimer);
         }
-        #endregion
-
-        #region Draw
 
         // Draw the grid
         public override void Draw(DrawProcessor drawProcessor)
         {
-            this.MapHandler.Draw(drawProcessor);
+            this.MapProcessor.Draw(drawProcessor);
         }
-        #endregion
 
         private void Demo_Load(object sender, EventArgs e)
         {

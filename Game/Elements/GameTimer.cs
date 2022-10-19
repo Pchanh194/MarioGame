@@ -8,7 +8,7 @@ namespace Game.Elements
 {
     public class GameTimer
     {
-        public GameTimer()
+        public GameTimer() 
         {
             StartTime =
             TimeFrame = DateTime.Now;

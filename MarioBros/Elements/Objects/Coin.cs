@@ -17,7 +17,7 @@ namespace MarioBros.Elements.Objects
             base.Image = resources.TextureAtlas;
 
             Size _unitSize = new Size(resources.MapData.tilewidth, resources.MapData.tileheight);
-            AnimationRects = base.Create_Rectangles(_unitSize, new Point(256, 192),
+            AnimationRects = base.Create_Animation(_unitSize, new Point(256, 192),
                                                                new Point(288, 192),
                                                                new Point(320, 192),
                                                                new Point(352, 192));

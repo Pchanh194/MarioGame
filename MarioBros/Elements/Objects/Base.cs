@@ -92,7 +92,7 @@ namespace MarioBros.Elements.Objects
         }
 
         // Create the collection of rectangles that make up an animation
-        protected Rectangle[] Create_Rectangles(Size size, params Point[] regions)
+        protected Rectangle[] Create_Animation(Size size, params Point[] regions)
         {
             Rectangle[] _rect = new Rectangle[regions.Length];
             for (int i = 0; i < regions.Length; i++)

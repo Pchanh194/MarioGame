@@ -9,6 +9,11 @@ namespace Game.Elements
 {
     public class KeyCode
     {
+        public static KeyCode keyCode = new KeyCode();
+        private KeyCode()
+        {
+
+        }
         public bool Space { get; private set; }
         public bool Right { get; private set; }
         public bool Left { get; private set; }
@@ -32,6 +37,10 @@ namespace Game.Elements
             Left = false;
             Up = false;
             Down = false;
+        }
+        public static KeyCode getKeyCode()
+        {
+            return keyCode;
         }
     }
 }

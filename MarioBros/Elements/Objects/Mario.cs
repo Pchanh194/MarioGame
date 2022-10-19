@@ -20,12 +20,12 @@ namespace MarioBros.Elements.Objects
             base.Image = resources.TextureAtlas;
 
             Size _unitSize = new Size(resources.MapData.tilewidth, resources.MapData.tileheight);
-            AnimationRec_Small_Stand = base.Create_Rectangles(_unitSize, new Point(320, 640));
-            AnimationRec_Small_Walk = base.Create_Rectangles(_unitSize, new Point(416, 640), new Point(320, 672), new Point(352, 672));
-            AnimationRec_Small_Jump = base.Create_Rectangles(_unitSize, new Point(384, 672));
-            AnimationRec_Small_Dead = base.Create_Rectangles(_unitSize, new Point(352, 640));
-            AnimationRec_Small_Stop = base.Create_Rectangles(_unitSize, new Point(384, 640));
-            AnimationRec_Small_Pillar = base.Create_Rectangles(_unitSize, new Point(320, 704));
+            AnimationRec_Small_Stand = base.Create_Animation(_unitSize, new Point(320, 640));
+            AnimationRec_Small_Walk = base.Create_Animation(_unitSize, new Point(416, 640), new Point(320, 672), new Point(352, 672));
+            AnimationRec_Small_Jump = base.Create_Animation(_unitSize, new Point(384, 672));
+            AnimationRec_Small_Dead = base.Create_Animation(_unitSize, new Point(352, 640));
+            AnimationRec_Small_Stop = base.Create_Animation(_unitSize, new Point(384, 640));
+            AnimationRec_Small_Pillar = base.Create_Animation(_unitSize, new Point(320, 704));
 
             ActionStatus = MarioAction.Idle;
             DirectionState = Direction.Right;

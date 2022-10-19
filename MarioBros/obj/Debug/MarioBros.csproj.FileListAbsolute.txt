@@ -33,3 +33,5 @@ C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioB
 C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.exe
 C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.pdb
 C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\bin\Debug\Assets\level2.json
+C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Menu.resources
+C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Elements.Map.MapProcessor.resources

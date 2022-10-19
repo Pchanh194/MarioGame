@@ -54,7 +54,9 @@
     <Compile Include="Elements\KeyCode.cs" />
     <Compile Include="Elements\Map\Obstacles_Layer.cs" />
     <Compile Include="Elements\Map\Tiles_Layer.cs" />
-    <Compile Include="Elements\Map\MapProcessor.cs" />
+    <Compile Include="Elements\Map\MapProcessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elements\Objects\Base.cs" />
     <Compile Include="Elements\Objects\Monster.cs" />
     <Compile Include="Elements\Objects\Coin.cs" />
@@ -72,11 +74,24 @@
     <Compile Include="Demo.Designer.cs">
       <DependentUpon>Demo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Level.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Demo.resx">
       <DependentUpon>Demo.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\Map\MapProcessor.resx">
+      <DependentUpon>MapProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +107,10 @@
     <None Include="Assets\level2.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Properties\DataSources\MarioBros.Data.Layer.datasource" />
+    <None Include="Properties\DataSources\MarioBros.Data.Map.datasource" />
+    <None Include="Properties\DataSources\MarioBros.Data.Object.datasource" />
+    <None Include="Properties\DataSources\MarioBros.Data.Tileset.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -21,12 +21,12 @@ namespace MarioBros.Elements.Objects
             base.Image = resources.TextureAtlas;
 
             Size _unitSize = new Size(resources.MapData.tilewidth, resources.MapData.tileheight);
-            AnimationRec_Normal = base.Create_Rectangles(_unitSize, new Point(320, 0),
+            AnimationRec_Normal = base.Create_Animation(_unitSize, new Point(320, 0),
                                                                     new Point(320, 64),
                                                                     new Point(320, 128),
                                                                     new Point(320, 64),
                                                                     new Point(320, 0));
-            AnimationRec_Empty = base.Create_Rectangles(_unitSize, new Point(224, 64));
+            AnimationRec_Empty = base.Create_Animation(_unitSize, new Point(224, 64));
 
             State = BoxState.Normal;
             this.FPS = 8;
