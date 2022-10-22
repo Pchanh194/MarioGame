@@ -101,11 +101,11 @@ namespace MarioBros.Elements.Map
         }
         private bool Has_TileCollision(int row, int col)
         {
-            if (col < 0 || col >= Size.Width)
-                return true;
-
-            if (row < 0 || row >= Size.Height)
+            if (row >= Size.Height || row >= Size.Height)
                 return false;
+
+            if (col >= Size.Width || col < 0)
+                return true;
 
             return Matrix[col, row];
         }

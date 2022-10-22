@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace MarioBros
 {
-    public partial class Demo : Game.Game
+    public partial class GameOn : Game.Game
     {
         // LevelProcessor level = new LevelProcessor(0);
-        public Demo(int level)
+        public GameOn(int level)
         {
             InitializeComponent();
             Initialize(level);
         }
         // Graphic resources of the game
         public Elements.Resources Resources { get; set; }
-        
+
         public Elements.Map.MapProcessor MapProcessor { get; set; }
 
         // Load the graphic resources of the game
@@ -37,7 +37,7 @@ namespace MarioBros
                 Program.NextLevel = false;
             }
             Check_File($"{directory}/level{Program.Level}.json");
-            
+
             this.Resources.MapData = Newtonsoft.Json.JsonConvert.DeserializeObject<Data.Map>(Load_Text($"{directory}/level{Program.Level}.json"));
             Canvas.BackColor = System.Drawing.ColorTranslator.FromHtml(this.Resources.MapData.backgroundcolor);
             InitializeMap();
@@ -50,7 +50,7 @@ namespace MarioBros
             MapProcessor.Restart += (obj, e) => InitializeMap(); // reset the map
         }
 
-        private void Demo_KeyDown(object sender, KeyEventArgs e)
+        private void GameOn_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
                 Elements.KeyCode.Left = true;
@@ -64,7 +64,7 @@ namespace MarioBros
             if (e.KeyCode == Keys.Up)
                 Elements.KeyCode.Jump = true;
         }
-        private void Demo_KeyUp(object sender, KeyEventArgs e)
+        private void GameOn_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
                 Elements.KeyCode.Left = false;
@@ -90,7 +90,7 @@ namespace MarioBros
             this.MapProcessor.Draw(drawProcessor);
         }
 
-        private void Demo_Load(object sender, EventArgs e)
+        private void GameOn_Load(object sender, EventArgs e)
         {
 
         }

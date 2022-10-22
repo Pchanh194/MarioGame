@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MarioBros.GameOn" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAICAAAwAAAACAAAACAAAAAAAAAAFQAQIAAAA=</HashCode>
+      <FileName>GameOn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Map.MapProcessor">
+    <Position X="9.25" Y="4.25" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="MarioBros.Elements.Map.MapProcessor.GameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Elements\Map\MapProcessor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAQAAIAABQJABgAAAAABAAQAAAQIAAQAACAABAAAAAI=</HashCode>
+      <FileName>Elements\Map\MapProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Map.Objects_Layer" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAgAAAAAAAQAJAAAgAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Map\Objects_Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Map.Obstacles_Layer" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAiAAAAAAAAAAIAIAgAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Elements\Map\Obstacles_Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Map.Tiles_Layer" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAQAAggAAAAAAAAAAAIAgAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Map\Tiles_Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Base">
+    <Position X="1" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAACAEAAAgACgAAAAEgQIAACAACAAACACAAlIAA=</HashCode>
+      <FileName>Elements\Objects\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Box">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="MarioBros.Elements.Objects.Box.BoxState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Elements\Objects\Box.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAIAAABEAAAAAAAAAEAAAAAAAAAACAAAAAFAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Box.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.233" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Brick">
+    <Position X="4.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Brick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Coin">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Coin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Goomba">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Goomba.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Koopa">
+    <Position X="7" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Koopa.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Mario">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQACAFAAAgAAAAAAAAABAAACAEgAAAAMCAIAAAA=</HashCode>
+      <FileName>Elements\Objects\Mario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.Monster">
+    <Position X="3" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MarioBros.Elements.Objects.Monster.MonsterState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Elements\Objects\Monster.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAABAAAQAA=</HashCode>
+      <FileName>Elements\Objects\Monster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MarioBros.Elements.Objects.PositionEventArgs">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MarioBros.Elements.Objects.IGravity" Collapsed="true">
+    <Position X="12" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Objects\Gravity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

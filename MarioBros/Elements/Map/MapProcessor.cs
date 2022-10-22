@@ -13,7 +13,7 @@ using System.IO;
 
 namespace MarioBros.Elements.Map
 {
-    public class MapProcessor : Game.Game
+    public class MapProcessor
     {
         // Objects
         public event EventHandler Restart;
@@ -131,7 +131,7 @@ namespace MarioBros.Elements.Map
             if (mario.PositionOnMap.X >= ((Tiles_Layer.Size.Width - 1) * Tiles_Layer.SizeOfTiles.Width))
             {
                 Program.NextLevel = true;
-                Demo newLevel = new Demo(Program.Level);
+                GameOn newLevel = new GameOn(Program.Level);
                 newLevel.Show();
                 this.Restart(null, EventArgs.Empty); // reset the map (or load the winning screen)
             }
@@ -209,25 +209,5 @@ namespace MarioBros.Elements.Map
             Win, // show the animation of mario winning
         }
 
-        private void InitializeComponent()
-        {
-            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // MapProcessor
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Name = "MapProcessor";
-            this.Load += new System.EventHandler(this.MapProcessor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
-            this.ResumeLayout(false);
-
-        }
-
-        private void MapProcessor_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

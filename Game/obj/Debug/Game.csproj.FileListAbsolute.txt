@@ -64,3 +64,13 @@ C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\Game\obj\Debug\Game.csproj
 C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\Game\obj\Debug\Game.dll
 C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\Game\obj\Debug\Game.pdb
+D:\Winform-Games-MarioBros\Game\bin\Debug\Game.dll
+D:\Winform-Games-MarioBros\Game\bin\Debug\Game.pdb
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.Base.resources
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.Game.resources
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.Properties.Resources.resources
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.dll
+D:\Winform-Games-MarioBros\Game\obj\Debug\Game.pdb

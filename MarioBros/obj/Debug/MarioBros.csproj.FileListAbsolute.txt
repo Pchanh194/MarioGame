@@ -35,3 +35,21 @@ C:\Users\Yoga 7i\Source\Repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioB
 C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\bin\Debug\Assets\level2.json
 C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Menu.resources
 C:\Users\Yoga 7i\source\repos\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Elements.Map.MapProcessor.resources
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\Assets\TileSet.png
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\MarioBros.exe.config
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\MarioBros.exe
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\MarioBros.pdb
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\Game.dll
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\Newtonsoft.Json.dll
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\Game.pdb
+D:\Winform-Games-MarioBros\MarioBros\bin\Debug\Newtonsoft.Json.xml
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.csproj.AssemblyReference.cache
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.csproj.SuggestedBindingRedirects.cache
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Menu.resources
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.Properties.Resources.resources
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.csproj.GenerateResource.cache
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.csproj.CoreCompileInputs.cache
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.csproj.CopyComplete
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.exe
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.pdb
+D:\Winform-Games-MarioBros\MarioBros\obj\Debug\MarioBros.GameOn.resources

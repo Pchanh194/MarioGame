@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.Canvas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
@@ -35,20 +36,23 @@
             // Canvas
             // 
             this.Canvas.BackColor = System.Drawing.Color.White;
-            this.Canvas.Location = new System.Drawing.Point(12, 12);
+            this.Canvas.Location = new System.Drawing.Point(16, 15);
+            this.Canvas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Canvas.Name = "Canvas";
-            this.Canvas.Size = new System.Drawing.Size(776, 426);
+            this.Canvas.Size = new System.Drawing.Size(1035, 524);
             this.Canvas.TabIndex = 1;
             this.Canvas.TabStop = false;
             this.Canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pcCanvas_MouseUp);
             // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.Canvas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Game";
             this.Text = "Games";
             this.Load += new System.EventHandler(this.Game_Load);

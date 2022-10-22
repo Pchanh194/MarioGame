@@ -15,7 +15,7 @@ namespace Game
     public partial class Game : Base
     {
         private GameTimer _GameTimer;
-        KeyCode keyCode = KeyCode.getKeyCode();
+        KeyCode keyCode = KeyCode.getKeyCode(); // Singleton
 
         // Timer that refreshes the game image
         private Timer _timer;
@@ -47,7 +47,7 @@ namespace Game
                 }
             };
         }
-        /// Information of what keys are pressed
+        // Information of what keys are pressed
         // protected KeyCode KeyCode { get; set; } 
 
         private void Game_Load(object sender, EventArgs e)

@@ -50,13 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameOn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Data\Data.cs" />
     <Compile Include="Elements\KeyCode.cs" />
     <Compile Include="Elements\Map\Obstacles_Layer.cs" />
     <Compile Include="Elements\Map\Tiles_Layer.cs" />
-    <Compile Include="Elements\Map\MapProcessor.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Elements\Map\MapProcessor.cs" />
     <Compile Include="Elements\Objects\Base.cs" />
     <Compile Include="Elements\Objects\Monster.cs" />
     <Compile Include="Elements\Objects\Coin.cs" />
@@ -68,13 +69,9 @@
     <Compile Include="Elements\Map\Objects_Layer.cs" />
     <Compile Include="Elements\Objects\Mario.cs" />
     <Compile Include="Elements\Resources.cs" />
-    <Compile Include="Demo.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GameOn.Designer.cs">
+      <DependentUpon>GameOn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demo.Designer.cs">
-      <DependentUpon>Demo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Level.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +80,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Demo.resx">
-      <DependentUpon>Demo.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elements\Map\MapProcessor.resx">
-      <DependentUpon>MapProcessor.cs</DependentUpon>
+    <EmbeddedResource Include="GameOn.resx">
+      <DependentUpon>GameOn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -104,9 +97,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Assets\level1.json" />
-    <None Include="Assets\level2.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Assets\level2.json" />
+    <None Include="Assets\level3.json" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\MarioBros.Data.Layer.datasource" />
     <None Include="Properties\DataSources\MarioBros.Data.Map.datasource" />
     <None Include="Properties\DataSources\MarioBros.Data.Object.datasource" />
@@ -134,6 +127,7 @@
     <Content Include="Assets\TileSet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\main-menu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

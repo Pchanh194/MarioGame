@@ -16,7 +16,7 @@ namespace MarioBros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Demo(Level));
+            Application.Run(new Menu());
         }
     }
 }

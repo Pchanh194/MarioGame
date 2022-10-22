@@ -26,9 +26,10 @@ namespace MarioBros.Elements.Map
                 switch (Convert.ToInt32(x.@class))
                 {
                     case 1:
-                        Mario = new Mario(resources, x);
-                        // MapObj.Add(Mario);
+                        Brick brick = new Brick(resources, x);
+                        MapObj.Add(brick);
                         break;
+                       
                     case 2:
                         Box box = new Box(resources, x);
                         ((Box)box).TossCoin += (sender, e) =>
@@ -40,23 +41,21 @@ namespace MarioBros.Elements.Map
                         MapObj.Add(box);
                         break;
                     case 3:
-                        Brick brick = new Brick(resources, x);
-                        MapObj.Add(brick);
-                        break;
-                    //case 4:
-                    //    mushroom to grow up // toad
-                    //    break;
-                    case 5:
-                        Pillar = new Rectangle(x.x, x.y - x.height, x.width, x.height);
-                        break;
-                    case 6:
                         Goomba goomba = new Goomba(resources, x);
                         MapObj.Add(goomba);
                         break;
-                    case 7:
+                    case 4:
                         Koopa koopa = new Koopa(resources, x);
                         MapObj.Add(koopa);
                         break;
+                    case 5:
+                        Mario = new Mario(resources, x);
+                        // MapObj.Add(Mario);
+                        break;
+                  
+                    case 6:
+                        Pillar = new Rectangle(x.x, x.y - x.height, x.width, x.height);
+                        break;      
                 }
             });
 
