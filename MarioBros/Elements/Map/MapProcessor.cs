@@ -31,7 +31,7 @@ namespace MarioBros.Elements.Map
             Tiles_Layer = new Tiles_Layer(resources, frameSize);
 
             // Binds the position change event of objects on the map
-            Objects_Layer.MapObj.ForEach(x => x.PositionOnMapChanged += ChangeObjPosition); 
+            Objects_Layer.MapObj.ForEach(x => x.PositionOnMapChanged += ChangeObjPosition);
             Objects_Layer.Mario.Dead += Mario_Dead;
 
             UpdateObjPosition(); // update the initial position of the objects
@@ -50,7 +50,7 @@ namespace MarioBros.Elements.Map
         // Graphic map information
         public Tiles_Layer Tiles_Layer { get; set; }
 
-        public void Update(GameTimer gameTimer)   
+        public void Update(GameTimer gameTimer)
         {
             if (State == GameState.Play)
                 UpdatePlaying(gameTimer);
@@ -65,7 +65,7 @@ namespace MarioBros.Elements.Map
         }
         private void UpdatePlaying(GameTimer gameTimer)
         {
-            _canvasRec = new RectangleF(this.Tiles_Layer.Position.X, this.Tiles_Layer.Position.Y, 
+            _canvasRec = new RectangleF(this.Tiles_Layer.Position.X, this.Tiles_Layer.Position.Y,
                                         _frameSize.Width, _frameSize.Height);
 
             List<Base> lstDiscard = new List<Base>();
@@ -168,7 +168,7 @@ namespace MarioBros.Elements.Map
         }
 
         // Updates the on-screen position of map objects
-        private void UpdateObjPosition(Base mapObject = null)   // Note
+        private void UpdateObjPosition(Base mapObject = null)   
         {
             List<Base> lstObjects;
 

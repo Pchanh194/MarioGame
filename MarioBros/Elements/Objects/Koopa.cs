@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MarioBros.Elements.Objects
 {
-    public class Koopa : Monster, IGravity
+    public class Koopa : Monster
     {
         public Koopa(Elements.Resources resources, Data.Object obj) : base(resources, obj)
         {

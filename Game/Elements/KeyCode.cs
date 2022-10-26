@@ -9,7 +9,7 @@ namespace Game.Elements
 {
     public class KeyCode
     {
-        public static KeyCode keyCode = new KeyCode();
+        private static KeyCode keyCode = new KeyCode();
         private KeyCode()
         {
 

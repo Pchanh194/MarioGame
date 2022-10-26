@@ -24,21 +24,21 @@
             // 
             // Canvas
             // 
+            this.Canvas.Dock = System.Windows.Forms.DockStyle.Left;
             this.Canvas.Image = ((System.Drawing.Image)(resources.GetObject("Canvas.Image")));
             this.Canvas.Location = new System.Drawing.Point(0, 0);
-            this.Canvas.Dock = System.Windows.Forms.DockStyle.Left;
             this.Canvas.Margin = new System.Windows.Forms.Padding(5);
             this.Canvas.Size = new System.Drawing.Size(1035, 554);
             // 
             // GameOn
             // 
-            this.Name = "GameOn";
-            this.Text = "MarioBros Game";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 554);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Name = "GameOn";
+            this.Text = "MarioBros Game";
             this.Load += new System.EventHandler(this.GameOn_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameOn_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameOn_KeyUp);

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Elements\Map\MapProcessor.cs" />
     <Compile Include="GameOn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,7 +58,6 @@
     <Compile Include="Elements\KeyCode.cs" />
     <Compile Include="Elements\Map\Obstacles_Layer.cs" />
     <Compile Include="Elements\Map\Tiles_Layer.cs" />
-    <Compile Include="Elements\Map\MapProcessor.cs" />
     <Compile Include="Elements\Objects\Base.cs" />
     <Compile Include="Elements\Objects\Monster.cs" />
     <Compile Include="Elements\Objects\Coin.cs" />

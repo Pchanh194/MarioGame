@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MarioBros.Elements.Objects
 {
-    interface IGravity
+    interface IGravity // IGravity, Box, Brick => Prototype / IGravity, Box, Coin => Proxy
     {
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MarioBros.Elements.Objects
 {
-    public class Goomba : Monster, IGravity
+    public class Goomba : Monster
     {
         public Goomba(Elements.Resources resources, Data.Object obj) : base(resources, obj)
         {
